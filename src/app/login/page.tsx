@@ -62,12 +62,20 @@ const LoginPage = () => {
         onChange={(e) => setUser({ ...user, password: e.target.value })}
         placeholder="password"
       />
-      <button
-        onClick={onLogin}
-        className="p-2 border-gray-300 rounded-lg focus:outline-none focus:border-gray-600  bg-stone-700 hover:bg-slate-600"
-      >
-        Login here
-      </button>
+      <div className="flex gap-3">
+        <button
+          onClick={onLogin}
+          className="px-4 py-2 border-gray-300 rounded-lg focus:outline-none focus:border-gray-600  bg-cyan-800 hover:bg-slate-600"
+        >
+          Login
+        </button>
+        <Link
+          href="/forgotpassword"
+          className="px-4 py-2 border-gray-300 rounded-lg focus:outline-none focus:border-gray-600  bg-red-900 hover:bg-slate-600"
+        >
+          Forgot Password?
+        </Link>
+      </div>
       <Link href={"/signup"}>Visit the signup page</Link>
     </div>
   );
